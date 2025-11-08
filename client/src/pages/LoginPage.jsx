@@ -121,7 +121,7 @@ const LoginPage = () => {
 
         <hr style={styles.divider} />
 
-        <a href="/api/auth/google" style={{ textDecoration: 'none' }}>
+        <a href="https://coding-h.onrender.com/api/auth/google" style={{ textDecoration: 'none' }}>
           <button style={styles.googleButton}>
             {/* Simple Google Icon */}
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48">

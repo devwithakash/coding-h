@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/authStore';
 
 const api = axios.create({
   // The proxy in vite.config.js will handle redirecting this to localhost:8080
-  baseURL: '/api', 
+  baseURL: 'https://coding-h.onrender.com/api', 
 });
 
 // This is an interceptor. It runs before every request is sent.
