@@ -27,7 +27,7 @@ app.use(passport.initialize());
 
 // --- Define Routes ---
 app.get('/', (req, res) => {
-  res.send('Backend server is running!');
+  res.send('Backend server is running 1.0.0!');
 });
 
 // Auth routes are public
