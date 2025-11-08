@@ -19,7 +19,13 @@ require('./config/jwtStrategy');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
+// This is your NEW code
+const corsOptions = {
+  origin: 'https://devwithakash.github.io', // Allow only your frontend
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Initialize Passport
