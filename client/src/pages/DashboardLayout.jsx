@@ -60,7 +60,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    height: '100vh',
+    // height: '100vh',
   },
   mainContentMobile: {
     width: '100%',
