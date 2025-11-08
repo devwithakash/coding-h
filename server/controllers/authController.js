@@ -83,5 +83,6 @@ exports.googleCallback = (req, res) => {
 
   // 2. Redirect back to the React app with the token
   // React's AuthCallbackPage will handle this URL
-  res.redirect(`${process.env.CLIENT_URL}/auth/callback?token=${token}`);
-}
+  // This is the NEW, FIXED line
+  res.redirect(`${process.env.CLIENT_URL}/#/auth/callback?token=${token}`);
+};
