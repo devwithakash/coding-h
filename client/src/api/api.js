@@ -1,18 +1,17 @@
 import axios from 'axios';
 import { useAuthStore } from '../store/authStore';
 
+// 1. Read the base URL from the environment variable
+const API_URL = import.meta.env.VITE_API_BASE_URL;
+
 const api = axios.create({
-  // The proxy in vite.config.js will handle redirecting this to localhost:8080
-  baseURL: 'https://coding-h.onrender.com/api', 
+  baseURL: API_URL
 });
 
-// This is an interceptor. It runs before every request is sent.
 api.interceptors.request.use(
   (config) => {
-    // Get the token from our Zustand store
     const token = useAuthStore.getState().token;
     if (token) {
-      // If the token exists, add it to the Authorization header
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;

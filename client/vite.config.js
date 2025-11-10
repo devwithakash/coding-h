@@ -11,16 +11,10 @@ export default defineConfig({
       proxy: {
         // Any request starting with /api will be proxied
         '/api': {
-          target: 'https://coding-h.onrender.com', 
+          target: 'http://localhost:8080', 
           changeOrigin: true,
           secure: false,
         },
-        // Also proxy the OAuth2 login path
-        '/oauth2': {
-          target: 'https://coding-h.onrender.com',
-          changeOrigin: true,
-          secure: false,
-        }
     }
   }
 })
